@@ -1,0 +1,66 @@
+var s = $feature.FIELDNAME
+var a = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+var x = split(s, " ")
+var b = ["NW", "Nw", "nw", "nW", "SW", "Sw", "sw", "sW", "NE", "Ne", "ne", "nE", "SE", "Se", "se", "sE"]
+
+var y = proper(text(x[0]))
+for (var k in a){
+if (Find(a[k], y, 0) > -1)
+var y = lower(y)}
+for (var p in x){
+for (var c in b){
+if (x[p] == b[c])
+var y = upper(y);}}
+
+if (count(x) > 1)
+var z = proper(text(x[1]))
+for (var k in a){
+if (Find(a[k], z, 0) > -1)
+var z = lower(z);}
+
+if (count(x) > 2)
+var q = proper(text(x[2]))
+for (var k in a){
+if (Find(a[k], q, 0) > -1)
+var q = lower(q);}
+
+if (count(x) > 3)
+var w = proper(text(x[3]))
+for (var k in a){
+if (Find(a[k], w, 0) > -1)
+var w = lower(w);}
+
+if (count(x) > 4)
+var e = proper(text(x[4]))
+for (var k in a){
+if (Find(a[k], e, 0) > -1)
+var e = lower(e);}
+
+if (count(x) > 5)
+var t = proper(text(x[5]))
+for (var k in a){
+if (Find(a[k], t, 0) > -1)
+var t = lower(t);}
+
+if (count(x) > 6)
+var u = proper(text(x[6]))
+for (var k in a){
+if (Find(a[k], u, 0) > -1)
+var u = lower(u);}
+
+if (count(x) == 1)
+var r = (y)
+if (count(x) == 2)
+var r = (y + " " + z)
+if (count(x) == 3)
+var r = (y + " " + z + " " + q)
+if (count(x) == 4)
+var r = (y + " " + z + " " + q + " " + w)
+if (count(x) == 5)
+var r = (y + " " + z + " " + q + " " + w + " " + e)
+if (count(x) == 6)
+var r = (y + " " + z + " " + q + " " + w + " " + e + " " + t)
+if (count(x) == 7)
+var r = (y + " " + z + " " + q + " " + w + " " + e + " " + t + " " + u)
+
+return r;
